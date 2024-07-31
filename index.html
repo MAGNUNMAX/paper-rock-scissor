@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <title>PAPER ROCK SCISSOR GAME</title>
+    <link rel="icon" href="./img/Banner.png">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<article>
+
+<div class="container">
+    <div class="header">
+        <h1 class="title">Paper Rock Scissor</h1>
+    </div>
+    <div class="main">
+        <div class="mainbox1"> <!--show room-->
+            <p id="show1">PLAYER 1</p>
+            <p id="show2">COMPUTER</p> 
+        </div>
+        <div class="mainbox2"> <!-- button-->
+            <button id="boton">START</button>
+            
+        </div>
+        <div class="notice">
+            <h3 id="noticeh3">click on an image to play until wins </h3>
+        </div>
+    </div>    
+    <div class="choice"> <!-- images selection-->
+        <p class ="text1">click  </p>
+        <img id="rock" src="/img/rock.png" alt="rock">
+        <img id="paper" src="/img/paper.png" alt="paper">
+        <img id="scissor" src="/img/scissor.png" alt="scissor">
+        <p class ="text2"> play </p>
+    </div>
+    <div class="Lside"> <!-- score left side -->
+        <p class="PL1">player  :</p>
+        <p class="scoreL">0</p>
+    </div>
+    <div class="Rside"> <!-- score rigth side -->
+        <p class="PL2">computer :</p>
+        <p class="scoreR">0</p>
+    </div>
+</div>
+
+</article>
+
+<script src="./script.js"></script>    
+</body>
+</html>

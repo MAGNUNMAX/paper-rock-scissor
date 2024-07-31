@@ -1,0 +1,171 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: azure;
+}
+
+.container{
+
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns:1fr 800px 1fr;
+    grid-template-rows: 1fr 320px 1fr;
+
+
+}
+
+.title{
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+p{
+    font-size: 2rem;
+    color: rgb(245, 14, 14);
+    margin: 30px;
+    font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.mainbox1{
+    display: flex;
+    flex-direction: row;
+    
+}
+#show1, #show2{
+    color: white;
+}
+
+#boton{
+    width: 100px;
+    height: 40px;
+    border: 5px solid red;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight:600;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    display: block;
+}
+#boton:hover{
+    border: 5px solid yellow;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+.PL1, .PL2{
+    color: black;
+}
+
+.PL1{
+    border-right: 400px;
+}
+
+.header{
+    grid-column: 1/4;
+    grid-row: 1/2;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background-color: blue;
+    
+}
+
+.text1,.text2{
+    display: none;
+}
+
+#noticeh3{
+    color: rgb(236, 236, 182);
+    
+}
+
+.choice{
+    grid-column: 1/4;
+    grid-row: 3/4;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Lside{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.Rside{
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+#paper,#rock,#scissor{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+
+}
+
+/* Estilo para tablets y pantallas medianas */
+@media screen and (max-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr 600px 1fr;
+        grid-template-rows: 1fr 300px 1fr;
+    }
+    .header, .choice {
+        font-size: 14px;
+    }
+    #paper, #rock, #scissor {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* Estilo para móviles y pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .header {
+        grid-column: 1/2;
+        grid-row: auto;
+    }
+    .main {
+        grid-column: 1/2;
+        grid-row: auto;
+    }
+    .choice {
+        grid-column: 1/2;
+        grid-row: auto;
+    }
+    .Lside, .Rside {
+        display: none;
+    }
+    #paper, #rock, #scissor {
+        width: 60px;
+        height: 60px;
+    }
+}
