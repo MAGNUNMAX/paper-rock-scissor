@@ -31,15 +31,15 @@ function game(){
         let compImg;
         switch(computerRandom){
         case 0:
-            compImg = '<img id="rock" src="/img/rock.png" alt="rock">';
+            compImg = '<img id="rock" src="./img/rock.png" alt="rock">';
             ranRock = 0;
             break;
         case 1:
-            compImg ='<img id="paper" src="/img/paper.png" alt="paper">';
+            compImg ='<img id="paper" src="./img/paper.png" alt="paper">';
             ranPaper = 1;
             break;
         case 2:
-            compImg = '<img id="scissor" src="/img/scissor.png" alt="scissor">';
+            compImg = '<img id="scissor" src="./img/scissor.png" alt="scissor">';
             ranScissor = 2;
             break;
         }
@@ -80,7 +80,7 @@ function game(){
     
 
     rock.addEventListener('click',()=>{
-        img1.innerHTML= '<img id="rock" src="/img/rock.png" alt="rock">';
+        img1.innerHTML= '<img id="rock" src="./img/rock.png" alt="rock">';
         rockPL = 0;
         
         setTimeout(()=>{
@@ -92,7 +92,7 @@ function game(){
     });
 
     paper.addEventListener('click',()=>{
-        img1.innerHTML= '<img id="paper" src="/img/paper.png" alt="paper">';
+        img1.innerHTML= '<img id="paper" src="./img/paper.png" alt="paper">';
         paperPL = 1;
 
         setTimeout(()=>{
@@ -104,7 +104,7 @@ function game(){
     });
 
     scissor.addEventListener('click',()=>{
-        img1.innerHTML= '<img id="scissor" src="/img/scissor.png" alt="scissor">';
+        img1.innerHTML= '<img id="scissor" src="./img/scissor.png" alt="scissor">';
         scissorPL = 2;
 
         setTimeout(()=>{
