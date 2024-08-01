@@ -2,7 +2,7 @@ let contPl1 = 0;
 let contPl2 = 0;
 
 function game(){
-
+    soundPicture();
     const rock = document.getElementById('rock');
     const paper = document.getElementById('paper');
     const scissor = document.getElementById('scissor');
@@ -71,7 +71,8 @@ function game(){
             rock.style.display = 'none';
             paper.style.display = 'none';
             scissor.style.display = 'none';
-            text1.textContent = contPl1 === 3 ? 'Player  wins!' : 'Computer wins!';
+            text1.textContent = contPl1 === 3 ? 'Player  wins!'  : 'Computer wins!';
+            winner();
             text2.textContent = '';
             notice.style.display ='none';
         }
@@ -81,6 +82,7 @@ function game(){
 
     rock.addEventListener('click',()=>{
         img1.innerHTML= '<img id="rock" src="./img/rock.png" alt="rock">';
+        soundPicture();
         rockPL = 0;
         
         setTimeout(()=>{
@@ -93,6 +95,7 @@ function game(){
 
     paper.addEventListener('click',()=>{
         img1.innerHTML= '<img id="paper" src="./img/paper.png" alt="paper">';
+        soundPicture();
         paperPL = 1;
 
         setTimeout(()=>{
@@ -105,6 +108,7 @@ function game(){
 
     scissor.addEventListener('click',()=>{
         img1.innerHTML= '<img id="scissor" src="./img/scissor.png" alt="scissor">';
+        soundPicture();
         scissorPL = 2;
 
         setTimeout(()=>{
@@ -114,6 +118,15 @@ function game(){
             comparation(scissorPL, computerRandom);
         },100);
     });
+
+    function soundPicture(){
+        var audio = new Audio('./sound/picsound.wav');
+            audio.play();
+    };
+    function winner(){
+        var audio = new Audio('./sound/winner.wav');
+            audio.play();
+    };
 };
 
 const boton = document.getElementById('boton');
